@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="assets/css/media.css" />
     <link rel="icon" href="favicon.png" type="image/svg" />
   </head>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./assets/js/index.js" defer></script>
+
   <body class="page">
     <header class="header">
       <div class="container header__container">
@@ -192,9 +200,9 @@
       <section class="experts">
         <div class="container experts__container">
           <h2 class="subtitle subtitle--experts">эксперты проекта</h2>
-          <div class="slider">
-            <ul class="experts__list">
-              <li class="experts__item">
+          <div class="swiper expertsSwiper">
+            <ul class="swiper-wrapper experts__list">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -210,7 +218,7 @@
                   </div>
                 </article>
               </li>
-              <li class="experts__item">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -224,7 +232,7 @@
                   </div>
                 </article>
               </li>
-              <li class="experts__item">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -240,7 +248,7 @@
                   </div>
                 </article>
               </li>
-              <li class="experts__item">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -254,7 +262,7 @@
                   </div>
                 </article>
               </li>
-              <li class="experts__item">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -268,7 +276,7 @@
                   </div>
                 </article>
               </li>
-              <li class="experts__item">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -282,7 +290,7 @@
                   </div>
                 </article>
               </li>
-              <li class="experts__item">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -296,7 +304,7 @@
                   </div>
                 </article>
               </li>
-              <li class="experts__item">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -310,7 +318,7 @@
                   </div>
                 </article>
               </li>
-              <li class="experts__item">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -324,7 +332,7 @@
                   </div>
                 </article>
               </li>
-              <li class="experts__item">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -338,7 +346,7 @@
                   </div>
                 </article>
               </li>
-              <li class="experts__item">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -352,7 +360,7 @@
                   </div>
                 </article>
               </li>
-              <li class="experts__item">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -366,7 +374,7 @@
                   </div>
                 </article>
               </li>
-              <li class="experts__item">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -382,7 +390,7 @@
                   </div>
                 </article>
               </li>
-              <li class="experts__item">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -396,7 +404,7 @@
                   </div>
                 </article>
               </li>
-              <li class="experts__item">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -431,13 +439,16 @@
                     alt="Лучший музыкальный проект"
                   />
                 </div>
-                <h3 class="nomination__title">Лучший музыкальный проект</h3>
-                <p class="nomination__text">
-                  Проект, оказавший наибольшее влияние на музыкальную индустрию
-                  в текущем году. Оцениваются популярность, инновационность и
-                  вклад в развитие жанра. Победитель определяется по сочетанию
-                  зрительского голосования и экспертной оценки.  
-                </p>
+                <div class="nomination__description">
+                  <h3 class="nomination__title">Лучший музыкальный проект</h3>
+                  <p class="nomination__text">
+                    Проект, оказавший наибольшее влияние на музыкальную
+                    индустрию в текущем году. Оцениваются популярность,
+                    инновационность и вклад в развитие жанра. Победитель
+                    определяется по сочетанию зрительского голосования и
+                    экспертной оценки.  
+                  </p>
+                </div>
               </div>
             </li>
             <li class="nominations__item">
@@ -449,13 +460,15 @@
                     alt="Прорыв года"
                   />
                 </div>
-                <h3 class="nomination__title">Прорыв года</h3>
-                <p class="nomination__text">
-                  Награда для самого яркого дебютанта или проекта, который за
-                  короткий срок добился значительного успеха. Учитываются рост
-                  популярности, качество контента и потенциал для дальнейшего
-                  развития.
-                </p>
+                <div class="nomination__description">
+                  <h3 class="nomination__title">Прорыв года</h3>
+                  <p class="nomination__text">
+                    Награда для самого яркого дебютанта или проекта, который за
+                    короткий срок добился значительного успеха. Учитываются рост
+                    популярности, качество контента и потенциал для дальнейшего
+                    развития.
+                  </p>
+                </div>
               </div>
             </li>
             <li class="nominations__item">
@@ -467,12 +480,14 @@
                     alt="Лучший альбом"
                   />
                 </div>
-                <h3 class="nomination__title">Лучший альбом</h3>
-                <p class="nomination__text">
-                  Присуждается за наиболее целостный, концептуальный и
-                  качественный альбом. Жюри оценивает музыкальное наполнение,
-                  тексты, аранжировки и общее впечатление от релиза.
-                </p>
+                <div class="nomination__description">
+                  <h3 class="nomination__title">Лучший альбом</h3>
+                  <p class="nomination__text">
+                    Присуждается за наиболее целостный, концептуальный и
+                    качественный альбом. Жюри оценивает музыкальное наполнение,
+                    тексты, аранжировки и общее впечатление от релиза.
+                  </p>
+                </div>
               </div>
             </li>
             <li class="nominations__item">
@@ -484,12 +499,14 @@
                     alt="Хит года"
                   />
                 </div>
-                <h3 class="nomination__title">Хит года</h3>
-                <p class="nomination__text">
-                  Песня, покорившая чарты и ставшая саундтреком года. Критерии —
-                  количество стримов, ротации на радио и культурное влияние.
-                  Победитель определяется статистикой и голосованием.
-                </p>
+                <div class="nomination__description">
+                  <h3 class="nomination__title">Хит года</h3>
+                  <p class="nomination__text">
+                    Песня, покорившая чарты и ставшая саундтреком года. Критерии
+                    — количество стримов, ротации на радио и культурное влияние.
+                    Победитель определяется статистикой и голосованием.
+                  </p>
+                </div>
               </div>
             </li>
             <li class="nominations__item">
@@ -501,12 +518,14 @@
                     alt="Лучший клип"
                   />
                 </div>
-                <h3 class="nomination__title">Лучший клип</h3>
-                <p class="nomination__text">
-                  Награда за самое креативное и визуально эффектное музыкальное
-                  видео. Оцениваются режиссура, операторская работа, идея и
-                  соответствие треку.  
-                </p>
+                <div class="nomination__description">
+                  <h3 class="nomination__title">Лучший клип</h3>
+                  <p class="nomination__text">
+                    Награда за самое креативное и визуально эффектное
+                    музыкальное видео. Оцениваются режиссура, операторская
+                    работа, идея и соответствие треку.  
+                  </p>
+                </div>
               </div>
             </li>
             <li class="nominations__item">
@@ -518,12 +537,14 @@
                     alt="Лучший концертный тур"
                   />
                 </div>
-                <h3 class="nomination__title">Лучший концертный тур</h3>
-                <p class="nomination__text">
-                  Приз за самый масштабный, зрелищный и успешный тур.
-                  Учитываются продажи билетов, организация шоу, энергия
-                  выступлений и отзывы фанатов.   
-                </p>
+                <div class="nomination__description">
+                  <h3 class="nomination__title">Лучший концертный тур</h3>
+                  <p class="nomination__text">
+                    Приз за самый масштабный, зрелищный и успешный тур.
+                    Учитываются продажи билетов, организация шоу, энергия
+                    выступлений и отзывы фанатов.   
+                  </p>
+                </div>
               </div>
             </li>
             <li class="nominations__item">
@@ -535,12 +556,14 @@
                     alt="Лучшая коллаборация"
                   />
                 </div>
-                <h3 class="nomination__title">Лучшая коллаборация</h3>
-                <p class="nomination__text">
-                  Награда за самое удачное совместное выступление или трек.
-                  Важны химия между артистами, популярность релиза и его влияние
-                  на поп-культуру.  
-                </p>
+                <div class="nomination__description">
+                  <h3 class="nomination__title">Лучшая коллаборация</h3>
+                  <p class="nomination__text">
+                    Награда за самое удачное совместное выступление или трек.
+                    Важны химия между артистами, популярность релиза и его
+                    влияние на поп-культуру.  
+                  </p>
+                </div>
               </div>
             </li>
             <li class="nominations__item">
@@ -552,12 +575,14 @@
                     alt="Социально значимый проект"
                   />
                 </div>
-                <h3 class="nomination__title">Социально значимый проект</h3>
-                <p class="nomination__text">
-                  Проект, который с помощью музыки поднимает важные темы,
-                  поддерживает благотворительность или вдохновляет на позитивные
-                  изменения.  
-                </p>
+                <div class="nomination__description">
+                  <h3 class="nomination__title">Социально значимый проект</h3>
+                  <p class="nomination__text">
+                    Проект, который с помощью музыки поднимает важные темы,
+                    поддерживает благотворительность или вдохновляет на
+                    позитивные изменения.  
+                  </p>
+                </div>
               </div>
             </li>
             <li class="nominations__item">
@@ -569,24 +594,28 @@
                     alt="Легенда музыки"
                   />
                 </div>
-                <h3 class="nomination__title">Легенда музыки</h3>
-                <p class="nomination__text">
-                  Специальная награда за выдающийся вклад в индустрию. Вручается
-                  артисту или группе, чьё творчество стало классикой и
-                  продолжает вдохновлять поколения.
-                </p>
+                <div class="nomination__description">
+                  <h3 class="nomination__title">Легенда музыки</h3>
+                  <p class="nomination__text">
+                    Специальная награда за выдающийся вклад в индустрию.
+                    Вручается артисту или группе, чьё творчество стало классикой
+                    и продолжает вдохновлять поколения.
+                  </p>
+                </div>
               </div>
             </li>
           </ul>
-          <button class="button nominations__button">Принять участие</button>
+          <div class="nominations__button-container">
+            <button class="button nominations__button">Принять участие</button>
+          </div>
         </div>
       </section>
       <section class="members">
         <div class="container members__container">
-          <h2 class="subtitle">участники проекта</h2>
-          <div class="slider">
-            <ul class="experts__list">
-              <li class="experts__item">
+          <h2 class="subtitle subtitle--members">участники проекта</h2>
+          <div class="swiper membersSwiper">
+            <ul class="swiper-wrapper experts__list">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -600,7 +629,7 @@
                   </div>
                 </article>
               </li>
-              <li class="experts__item">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -616,7 +645,7 @@
                   </div>
                 </article>
               </li>
-              <li class="experts__item">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -632,7 +661,7 @@
                   </div>
                 </article>
               </li>
-              <li class="experts__item">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -648,7 +677,7 @@
                   </div>
                 </article>
               </li>
-              <li class="experts__item">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -662,7 +691,7 @@
                   </div>
                 </article>
               </li>
-              <li class="experts__item">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -676,7 +705,7 @@
                   </div>
                 </article>
               </li>
-              <li class="experts__item">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -690,7 +719,7 @@
                   </div>
                 </article>
               </li>
-              <li class="experts__item">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -704,7 +733,7 @@
                   </div>
                 </article>
               </li>
-              <li class="experts__item">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -718,7 +747,7 @@
                   </div>
                 </article>
               </li>
-              <li class="experts__item">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -732,7 +761,7 @@
                   </div>
                 </article>
               </li>
-              <li class="experts__item">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -746,7 +775,7 @@
                   </div>
                 </article>
               </li>
-              <li class="experts__item">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -760,7 +789,7 @@
                   </div>
                 </article>
               </li>
-              <li class="experts__item">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -774,7 +803,7 @@
                   </div>
                 </article>
               </li>
-              <li class="experts__item">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -790,7 +819,7 @@
                   </div>
                 </article>
               </li>
-              <li class="experts__item">
+              <li class="swiper-slide experts__item">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -814,7 +843,7 @@
       </section>
       <section class="video">
         <div class="container video__container">
-          <h2 class="subtitle">видео проекта</h2>
+          <h2 class="subtitle subtitle--video">видео проекта</h2>
           <div class="video__wrapper">
             <p class="video__text">
               Яркие эмоции, незабываемые моменты и самые громкие имена музыки —
@@ -824,16 +853,28 @@
               церемонии, бэкстейджа и зрительских реакций. Это больше, чем
               награждение — это праздник музыки, который останется в истории.  
             </p>
-            <div class="video__player">тут будет плеер</div>
+            <div class="video__player">
+              <iframe
+                width="740"
+                height="436"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=CwTTMxSwQGOJP1Ur?autoplay=1"
+                title="Видео проекта"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
           </div>
         </div>
       </section>
       <section class="winners">
         <div class="container winners__container">
-          <h2 class="subtitle">победители 2025</h2>
-          <div class="slider">
-            <ul class="winners__list">
-              <li class="winners__item">
+          <h2 class="subtitle subtitle--winners">победители 2025</h2>
+          <div class="swiper winnersSwiper">
+            <ul class="swiper-wrapper experts__list">
+              <li class="experts__item swiper-slide">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -849,7 +890,7 @@
                   </div>
                 </article>
               </li>
-              <li class="winners__item">
+              <li class="experts__item swiper-slide">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -863,7 +904,7 @@
                   </div>
                 </article>
               </li>
-              <li class="winners__item">
+              <li class="experts__item swiper-slide">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -877,7 +918,7 @@
                   </div>
                 </article>
               </li>
-              <li class="winners__item">
+              <li class="experts__item swiper-slide">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -893,7 +934,7 @@
                   </div>
                 </article>
               </li>
-              <li class="winners__item">
+              <li class="experts__item swiper-slide">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -907,7 +948,7 @@
                   </div>
                 </article>
               </li>
-              <li class="winners__item">
+              <li class="experts__item swiper-slide">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -921,7 +962,7 @@
                   </div>
                 </article>
               </li>
-              <li class="winners__item">
+              <li class="experts__item swiper-slide">
                 <article class="expert">
                   <picture class="expert__photo">
                     <img
@@ -1069,8 +1110,8 @@
       <section class="partners">
         <div class="container partners__container">
           <h2 class="subtitle">партнеры</h2>
-          <div class="slider">
-            <ul class="partners__list">
+          <div class="swiper partnersSwiper">
+            <ul class="swiper-wrapper partners__list">
               <li class="partners__item">
                 <a href="#" class="partners__link">
                   <img
