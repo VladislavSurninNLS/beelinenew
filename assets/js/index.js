@@ -1,5 +1,5 @@
 const expertsSwiper = new Swiper(".expertsSwiper", {
-  slidesPerView: 6,
+  slidesPerView: 2,
   spaceBetween: 20,
   navigation: {
     nextEl: ".slider__button_next",
@@ -18,6 +18,14 @@ const expertsSwiper = new Swiper(".expertsSwiper", {
     768: {
       slidesPerView: 3,
       spaceBetween: -55,
+    },
+    520: {
+      slidesPerView: 2,
+      spaceBetween: 0,
+    },
+    320: {
+      slidesPerView: 1.5,
+      spaceBetween: 20,
     },
   }
 });
@@ -43,6 +51,14 @@ const membersSwiper = new Swiper(".membersSwiper", {
       slidesPerView: 3,
       spaceBetween: -55,
     },
+    520: {
+      slidesPerView: 2,
+      spaceBetween: 0,
+    },
+    320: {
+      slidesPerView: 1.5,
+      spaceBetween: 20,
+    },
   }
 });
 
@@ -66,6 +82,14 @@ const winnersSwiper = new Swiper(".winnersSwiper", {
     768: {
       slidesPerView: 3,
       spaceBetween: -55,
+    },
+    520: {
+      slidesPerView: 2,
+      spaceBetween: 0,
+    },
+    320: {
+      slidesPerView: 1.5,
+      spaceBetween: 20,
     },
   }
 });
@@ -93,10 +117,11 @@ document.addEventListener("DOMContentLoaded", () => {
         // Убираем класс у активного элемента
         activeStage.classList.remove("stage--active");
 
-        // Ждём 0.2 секунды перед добавлением нового класса
+        const delay = window.matchMedia("(min-width: 520px)").matches ? 800 : 0;
+
         setTimeout(() => {
           stage.classList.add("stage--active");
-        }, 800);
+        }, delay);
       } else if (!activeStage) {
         // Если активного элемента нет, просто добавляем класс
         stage.classList.add("stage--active");

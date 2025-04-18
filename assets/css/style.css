@@ -416,6 +416,10 @@ h6 {
   transition: opacity 0.3s ease-in-out 0.2s;
 }
 
+.stage__date--mobile {
+  display: none;
+}
+
 .stage__text {
   max-height: 0px;
   color: var(--color-grey);
@@ -947,6 +951,10 @@ h6 {
 .footer {
   padding: 72px 0;
   background-color: var(--color-purple);
+}
+
+.footer__logo--mobile {
+  display: none;
 }
 
 .footer__link {
