@@ -15,6 +15,10 @@ const expertsSwiper = new Swiper(".expertsSwiper", {
       slidesPerView: 4,
       spaceBetween: 0,
     },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: -55,
+    },
   }
 });
 
@@ -35,6 +39,10 @@ const membersSwiper = new Swiper(".membersSwiper", {
       slidesPerView: 4,
       spaceBetween: 0,
     },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: -55,
+    },
   }
 });
 
@@ -54,6 +62,10 @@ const winnersSwiper = new Swiper(".winnersSwiper", {
     1024: {
       slidesPerView: 4,
       spaceBetween: 0,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: -55,
     },
   }
 });
