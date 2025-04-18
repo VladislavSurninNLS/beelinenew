@@ -6,6 +6,16 @@ const expertsSwiper = new Swiper(".expertsSwiper", {
     prevEl: ".slider__button_prev",
   },
   loop: true,
+  breakpoints: {
+    1440: {
+      slidesPerView: 6,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 0,
+    },
+  }
 });
 
 const membersSwiper = new Swiper(".membersSwiper", {
@@ -16,6 +26,16 @@ const membersSwiper = new Swiper(".membersSwiper", {
     prevEl: ".slider__button_prev",
   },
   loop: true,
+  breakpoints: {
+    1440: {
+      slidesPerView: 6,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 0,
+    },
+  }
 });
 
 const winnersSwiper = new Swiper(".winnersSwiper", {
@@ -26,6 +46,16 @@ const winnersSwiper = new Swiper(".winnersSwiper", {
     prevEl: ".slider__button_prev",
   },
   loop: true,
+  breakpoints: {
+    1440: {
+      slidesPerView: 6,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 0,
+    },
+  }
 });
 
 const partnersSwiper = new Swiper(".partnersSwiper", {
@@ -33,11 +63,32 @@ const partnersSwiper = new Swiper(".partnersSwiper", {
   spaceBetween: 20,
   loop: true,
   autoplay: {
-    delay: 0, // Убираем задержку между прокрутками
+    delay: 0,
     disableOnInteraction: false,
-    reverseDirection: true, // Скролл влево
+    reverseDirection: true,
   },
-  speed: 3000, // Уменьшаем скорость для плавности
+  speed: 3000,
 });
 
-const player = VK.VideoPlayer(iframe);
+document.addEventListener("DOMContentLoaded", () => {
+  const stages = document.querySelectorAll(".stage");
+
+  stages.forEach((stage) => {
+    stage.addEventListener("click", () => {
+      const activeStage = document.querySelector(".stage--active");
+
+      if (activeStage && activeStage !== stage) {
+        // Убираем класс у активного элемента
+        activeStage.classList.remove("stage--active");
+
+        // Ждём 0.2 секунды перед добавлением нового класса
+        setTimeout(() => {
+          stage.classList.add("stage--active");
+        }, 800);
+      } else if (!activeStage) {
+        // Если активного элемента нет, просто добавляем класс
+        stage.classList.add("stage--active");
+      }
+    });
+  });
+});

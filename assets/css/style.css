@@ -329,6 +329,7 @@ h6 {
 /* stages */
 
 .stages__container {
+  min-height: 810px;
   padding-top: 72px;
   padding-bottom: 72px;
   display: flex;
@@ -342,7 +343,11 @@ h6 {
 .stages__list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+  justify-content: center;
 }
 
 .stage {
@@ -376,7 +381,7 @@ h6 {
   max-height: 68px;
   overflow: hidden;
   border-radius: 50px;
-  transition: max-height 0.3s ease-in-out;
+  transition: max-height 0.3s ease-in-out, border-radius 0.3s ease-in-out;
 }
 
 .stage__description {
@@ -422,22 +427,23 @@ h6 {
   transition: max-height 0.3s ease-in-out 0.5s, opacity 0.3s ease-in-out 0.2s;
 }
 
-.stage:hover .stage__text {
+.stage--active .stage__text {
   max-height: 300px;
   opacity: 1;
 }
 
-.stage:hover {
+.stage--active {
   background: var(--color-green);
   border: 1px solid var(--color-green);
 }
 
-.stage:hover .stage__date {
+.stage--active .stage__date {
   opacity: 1;
 }
 
-.stage:hover .stage__photo {
+.stage--active .stage__photo {
   max-height: 208px;
+  border-radius: 10px;
 }
 
 /* experts */
@@ -677,6 +683,13 @@ h6 {
 
 .video__player {
   max-width: 740px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.video__player iframe {
+  height: 436px;
+  width: 740px; 
 }
 
 .subtitle--video {
@@ -691,6 +704,7 @@ h6 {
 }
 
 .video__text {
+  max-width: 611px;
   font-size: 28px;
   font-style: normal;
   line-height: 140%;
@@ -875,6 +889,7 @@ h6 {
 .contacts__container::after {
   content: "";
   position: absolute;
+  z-index: -1;
   inset: 0;
   background-image: url("../img/contacts-left-background.png");
   background-repeat: no-repeat;
@@ -932,11 +947,11 @@ h6 {
 /* footer */
 
 .footer {
+  padding: 72px 0;
   background-color: var(--color-purple);
 }
 
 .footer__link {
   display: flex;
   justify-content: center;
-  padding: 72px 0;
 }
