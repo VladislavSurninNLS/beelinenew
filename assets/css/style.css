@@ -422,7 +422,7 @@ h6 {
 }
 
 .stage__date--mobile {
-  display: none;
+  display: none !important;
 }
 
 .stage__text {
