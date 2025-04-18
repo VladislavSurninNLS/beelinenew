@@ -29,12 +29,13 @@ const winnersSwiper = new Swiper(".winnersSwiper", {
 });
 
 const partnersSwiper = new Swiper(".partnersSwiper", {
-  slidesPerView: 6,
+  slidesPerView: 6, // Автоматическая ширина слайдов
   spaceBetween: 20,
-  navigation: {
-    nextEl: ".slider__button_next",
-    prevEl: ".slider__button_prev",
-  },
   loop: true,
+  autoplay: {
+    delay: 0, // Убираем задержку между прокрутками
+    disableOnInteraction: false,
+    reverseDirection: true, // Скролл влево
+  },
+  speed: 3000, // Уменьшаем скорость для плавности
 });
-
