@@ -39,3 +39,5 @@ const partnersSwiper = new Swiper(".partnersSwiper", {
   },
   speed: 3000, // Уменьшаем скорость для плавности
 });
+
+const player = VK.VideoPlayer(iframe);
