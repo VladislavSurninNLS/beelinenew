@@ -3,12 +3,16 @@ import { slidersInit } from "./sliders.js";
 import { stagesInit } from './stages.js';
 import { openModal } from "./modal.js";
 import { openVideo } from './video.js';
+import { burgerInit } from "./burger.js";
 
 // Инициализация слайдеров
 slidersInit();
 
 // Инициализация этапов
 stagesInit();
+
+// Инициализация бургера
+burgerInit();
 
 // Добавление обработчиков событий для кнопок с классом "button--external"
 // При клике открывается модальное окно

@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -32,7 +33,9 @@ img {
 
 @font-face {
   font-family: "Inter";
-  src: local("Inter-Regular"), url("../fonts/Inter-Regular.otf") format("otf");
+  src:
+    local("Inter-Regular"),
+    url("../fonts/Inter-Regular.otf") format("otf");
   font-display: swap;
   font-weight: 400;
   font-style: normal;
@@ -40,7 +43,9 @@ img {
 
 @font-face {
   font-family: "Inter";
-  src: local("Inter-Medium"), url("../fonts/Inter-Medium.otf") format("otf");
+  src:
+    local("Inter-Medium"),
+    url("../fonts/Inter-Medium.otf") format("otf");
   font-display: swap;
   font-weight: 500;
   font-style: normal;
@@ -48,7 +53,9 @@ img {
 
 @font-face {
   font-family: "Inter";
-  src: local("Inter-SemiBold"), url("../fonts/Inter-SemiBold.otf") format("otf");
+  src:
+    local("Inter-SemiBold"),
+    url("../fonts/Inter-SemiBold.otf") format("otf");
   font-display: swap;
   font-weight: 600;
   font-style: normal;
@@ -56,7 +63,9 @@ img {
 
 @font-face {
   font-family: "Inter";
-  src: local("Inter-Bold"), url("../fonts/Inter-Bold.otf") format("otf");
+  src:
+    local("Inter-Bold"),
+    url("../fonts/Inter-Bold.otf") format("otf");
   font-display: swap;
   font-weight: 700;
   font-style: normal;
@@ -64,7 +73,8 @@ img {
 
 @font-face {
   font-family: "Inter";
-  src: local("Inter-ExtraBold"),
+  src:
+    local("Inter-ExtraBold"),
     url("../fonts/Inter-ExtraBold.otf") format("otf");
   font-display: swap;
   font-weight: 800;
@@ -105,7 +115,9 @@ ul {
   color: var(--color-dark);
   background-color: var(--color-green);
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
   text-transform: uppercase;
 }
 
@@ -158,15 +170,81 @@ ul {
   background-color: var(--color-light-purple);
 }
 
-.header__top {
-  max-width: 220px;
+.header__container {
+  position: relative;
+  height: 50px;
+}
+
+.header__wrapper {
+  max-width: 241px;
+  position: absolute;
+  z-index: 200;
   padding: 10px;
-  padding-right: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 24px;
+  background-color: white;
+  transition: gap 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.header__top {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 40px;
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+}
+
+.nav__list {
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-inline: 10px;
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0px;
+  transition:
+    max-height 0.3s ease-in-out,
+    opacity 0.3s ease-in-out 0.3s;
+}
+
+.header__wrapper--open {
+  gap: 16px;
+  padding-bottom: 20px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.header__wrapper--open .nav__list {
+  max-height: 600px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.header__wrapper--open .button_menu {
+  background-image: url("../img/icons/close-burger.svg");
+  width: 28px;
+  height: 28px;
+}
+
+.nav__item {
+  color: var(--color-dark);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav__item:hover {
+  color: var(--color-purple);
 }
 
 .button_menu {
@@ -178,6 +256,7 @@ ul {
   background-image: url("../img/icons/header-button.svg");
   background-position: center;
   background-repeat: no-repeat;
+  transition: background-image 0.3s ease-in-out;
 }
 
 .button_menu:hover {
@@ -363,7 +442,9 @@ h6 {
   border-radius: 12px;
   border: 1px solid #9747ff;
   background: #fff;
-  transition: border 0.3s ease-in-out 0.2s, background 0.3s ease-in-out 0.2s;
+  transition:
+    border 0.3s ease-in-out 0.2s,
+    background 0.3s ease-in-out 0.2s;
 }
 
 .stage__title {
@@ -386,7 +467,9 @@ h6 {
   max-height: 68px;
   overflow: hidden;
   border-radius: 50px;
-  transition: max-height 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+  transition:
+    max-height 0.3s ease-in-out,
+    border-radius 0.3s ease-in-out;
 }
 
 .stage__description {
@@ -434,7 +517,9 @@ h6 {
   letter-spacing: -0.8px;
   overflow: hidden;
   opacity: 0;
-  transition: max-height 0.3s ease-in-out 0.5s, opacity 0.3s ease-in-out 0.2s;
+  transition:
+    max-height 0.3s ease-in-out 0.5s,
+    opacity 0.3s ease-in-out 0.2s;
 }
 
 .stage--active .stage__text {
@@ -545,7 +630,9 @@ h6 {
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  transition: opacity 0.3s ease-in-out, background-image 0.3s ease-in-out;
+  transition:
+    opacity 0.3s ease-in-out,
+    background-image 0.3s ease-in-out;
   opacity: 0.6;
 }
 
@@ -699,7 +786,7 @@ h6 {
   width: 740px;
 }
 
-.modal__video{
+.modal__video {
   width: 100%;
 }
 
@@ -1009,7 +1096,6 @@ h6 {
   text-transform: uppercase;
 }
 
-
 .form__fields {
   display: flex;
   flex-direction: column;
@@ -1121,7 +1207,9 @@ h6 {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  transition: background-color 0.3s, border-color 0.3s;
+  transition:
+    background-color 0.3s,
+    border-color 0.3s;
 }
 
 .form__radio-group input[type="radio"]:checked + .form__radio-label::before {
@@ -1153,7 +1241,9 @@ h6 {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  transition: background-color 0.3s, border-color 0.3s;
+  transition:
+    background-color 0.3s,
+    border-color 0.3s;
 }
 
 .form__consent-group input[type="checkbox"]:checked + label::before {
