@@ -29,7 +29,7 @@ img {
   --color-FFB84D: #ffb84d;
   --color-light-green: #e6ffbb;
   --color-grey: #717171;
-  --color-error: #FF474A;
+  --color-error: #ff474a;
 }
 
 @font-face {
@@ -615,6 +615,7 @@ h6 {
 }
 
 .slider__buttons {
+  padding-top: 30px;
   display: flex;
   align-items: flex-start;
   justify-self: center;
@@ -731,6 +732,7 @@ h6 {
   overflow: hidden;
   border-radius: 10px;
   height: 234px;
+  width: 100%;
 }
 
 .nominations__button {

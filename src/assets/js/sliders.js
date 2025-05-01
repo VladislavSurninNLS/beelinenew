@@ -1,6 +1,7 @@
 const DEFAULT_SLIDER_SETTINGS = {
   slidesPerView: 2,
   spaceBetween: 20,
+  freeMode: true,
   navigation: {
     nextEl: ".slider__button_next",
     prevEl: ".slider__button_prev",
