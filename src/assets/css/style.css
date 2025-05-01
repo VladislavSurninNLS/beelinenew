@@ -735,6 +735,14 @@ h6 {
   width: 100%;
 }
 
+.nomination__img {
+  display: block;
+}
+
+.nomination__image {
+  width: 100%;
+}
+
 .nominations__button {
   width: 100%;
   display: flex;

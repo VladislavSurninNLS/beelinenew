@@ -1,9 +1,12 @@
 @media screen and (max-width: 1439px) {
   .container {
-    max-width: 1024px;
+    /* max-width: 1024px; */
     padding: 0 12px;
   }
 
+  .header__container {
+    height: 40px;
+  }
   .title {
     font-size: 100px;
     letter-spacing: 1.1px;
@@ -16,6 +19,10 @@
   }
 
   /* header */
+
+  .hero__container {
+    max-width: 1024px;
+  }
 
   .header__wrapper {
     max-width: 241px;
@@ -219,11 +226,10 @@
 }
 
 @media screen and (max-width: 1023px) {
-
   .no-scroll {
     padding-right: 0;
   }
-  .container {
+  .hero__container {
     max-width: 768px;
   }
 
@@ -246,11 +252,30 @@
     padding: 0;
   }
 
-
   .header__logo {
     width: 102px;
     height: 20px;
     transform: none;
+  }
+
+  .header__wrapper {
+    max-width: 209px;
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .header__wrapper--open {
+    padding: 6px 10px 18px;
+    gap: 11px;
+  }
+
+  .nav__list {
+    width: 100%;
+    padding: 0;
+  }
+
+  .nav__item {
+    font-size: 12px;
   }
 
   /* hero */
@@ -538,7 +563,7 @@
   .modal {
     max-width: 581px;
     padding: 20px;
-    align-items: center
+    align-items: center;
   }
 
   .modal__title {
@@ -552,7 +577,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    align-items: center
+    align-items: center;
   }
 
   .form__consent-group {
@@ -596,28 +621,8 @@
     height: 40px;
   }
 
-  .header__wrapper {
-    max-width: 209px;
-    width: 100%;
-    border-radius: 20px;
-  }
-
-  .header__wrapper--open {
-    padding: 6px 10px 18px;
-    gap: 11px;
-  }
-
   .button_menu {
     height: 8px;
-  }
-
-  .nav__list {
-    width: 100%;
-    padding: 0;
-  }
-
-  .nav__item {
-    font-size: 12px;
   }
 
   .hero__middle {
@@ -763,7 +768,7 @@
 
 @media screen and (max-width: 516px) {
   .container {
-    max-width: 320px;
+    /* max-width: 320px; */
     padding: 0 10px;
   }
   .title {
@@ -773,6 +778,7 @@
   /* header */
 
   .hero__container {
+    max-width: 320px;
     padding: 0;
   }
 
@@ -884,7 +890,7 @@
   }
 
   .stage--active .stage__date--mobile {
-    display: block!important;
+    display: block !important;
     font-size: 14px;
   }
 
