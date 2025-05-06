@@ -9,8 +9,8 @@ const DEFAULT_SLIDER_SETTINGS = {
   loop: true,
   breakpoints: {
     1440: {
-      slidesPerView: 6,
-      spaceBetween: 20,
+      slidesPerView: 6.1,
+      spaceBetween: 0,
     },
     1024: {
       slidesPerView: 4,
@@ -37,24 +37,39 @@ export function slidersInit() {
   const winnersSwiper = new Swiper(".winnersSwiper", DEFAULT_SLIDER_SETTINGS);
 
   const partnersSwiper = new Swiper(".partnersSwiper", {
-    slidesPerView: 6,
-    spaceBetween: 20,
+    slidesPerView: "auto",
+    spaceBetween: 64,
     loop: true,
-    autoplay: {
-      delay: 0,
-      disableOnInteraction: false,
-      reverseDirection: true,
-    },
     speed: 3000,
     breakpoints: {
       520: {
-        slidesPerView: 4,
-        spaceBetween: 20,
+        spaceBetween: 64,
       },
       320: {
-        slidesPerView: 3,
-        spaceBetween: 20,
+        spaceBetween: 32,
       },
     },
   });
+
+  let autoScroll = true;
+  let scrollInterval;
+
+  function startAutoScroll() {
+    scrollInterval = setInterval(() => {
+      if (autoScroll) {
+        partnersSwiper.slideNext();
+      }
+    }, 1000); // можно изменить скорость
+  }
+
+  function stopAutoScroll() {
+    autoScroll = false;
+    clearInterval(scrollInterval);
+  }
+
+  document
+    .querySelector(".partnersSwiper")
+    .addEventListener("click", stopAutoScroll);
+
+  startAutoScroll();
 }

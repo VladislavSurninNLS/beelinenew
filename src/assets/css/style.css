@@ -283,7 +283,7 @@ h6 {
 
 .hero__wrapper {
   min-height: 648px;
-  padding-top: 267px;
+  padding-top: 264px;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url("../img/hero-background.webp");
@@ -306,7 +306,7 @@ h6 {
 
 .hero__bottom {
   margin-right: 97px;
-  padding-left: 55px;
+  padding-left: 85px;
   background-image: url(../img/hero-block-bottom.webp);
   background-repeat: no-repeat;
   background-position: center;
@@ -318,7 +318,7 @@ h6 {
   font-weight: 700;
   line-height: normal;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   line-height: 75%;
 }
 
@@ -389,7 +389,7 @@ h6 {
   flex-direction: column;
   gap: 12px;
   align-items: center;
-  padding: 72px 40px;
+  padding: 70px 40px;
   background-image: url("../img/about-background.webp");
   background-size: cover;
   background-repeat: no-repeat;
@@ -654,10 +654,10 @@ h6 {
 }
 
 .nominations__list {
-  padding-top: 12px;
+  padding-top: 14px;
   margin-bottom: 72px;
   display: grid;
-  gap: 20px;
+  gap: 22px 20px;
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -669,7 +669,7 @@ h6 {
   align-items: flex-start;
   gap: 12px;
   border-radius: 10px;
-  border: 1px solid #9747ff;
+  box-shadow: inset 0 0 0 1px var(--color-purple);
   background: #fff;
 }
 
@@ -824,7 +824,7 @@ h6 {
 
 .winners__container {
   position: relative;
-  padding: 72px 40px;
+  padding: 72px 0;
 }
 
 .winners__container::before {
@@ -856,13 +856,13 @@ h6 {
 }
 
 .winners .expert {
-  border: 1px solid #d5a2fa;
+  box-shadow: inset 0 0 0 1px var(--color-transparent-purple);
 }
 
 /* program */
 
 .program {
-  padding: 72px 40px;
+  padding: 72px 0;
   background-color: var(--color-light-green);
   background-image: url("../img/program-background.webp");
   background-position: bottom;
@@ -877,7 +877,7 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
+  gap: 23px;
 }
 
 .program__item {
@@ -935,6 +935,7 @@ h6 {
   font-size: 20px;
   font-weight: 500;
   letter-spacing: -1px;
+  line-height: normal;
 }
 
 .program__speeker-position {
@@ -973,8 +974,10 @@ h6 {
   min-height: 166px;
 }
 
+
 .partners__item {
   height: 100%;
+  width: auto !important;
   align-self: center;
 }
 
@@ -989,7 +992,7 @@ h6 {
 
 .contacts__container {
   position: relative;
-  padding: 72px 40px 81px;
+  padding: 72px 40px 86px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1033,6 +1036,7 @@ h6 {
   color: var(--color-dark);
   font-size: 16px;
   letter-spacing: -0.8px;
+  line-height: normal;
 }
 
 .contacts__name {

@@ -49,7 +49,13 @@ module.exports = (env) => ({
       filename: "main.[contenthash].css",
     }),
     new CopyWebpackPlugin({
-      patterns: [{ from: "src/assets", to: "assets" }],
+      patterns: [
+        {
+          from: "src/assets",
+          to: "assets",
+          filter: (resourcePath) => !resourcePath.endsWith(".js"),
+        },
+      ],
     }),
   ],
   devServer: {

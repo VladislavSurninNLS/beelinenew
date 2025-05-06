@@ -1,9 +1,12 @@
 @media screen and (max-width: 1439px) {
   .container {
-    max-width: 1024px;
+    /* max-width: 1024px; */
     padding: 0 12px;
   }
 
+  .header__container {
+    height: 40px;
+  }
   .title {
     font-size: 100px;
     letter-spacing: 1.1px;
@@ -17,12 +20,16 @@
 
   /* header */
 
-  .header__top {
+  .hero__container {
+    max-width: 1024px;
+  }
+
+  .header__wrapper {
     max-width: 241px;
   }
 
   .button_menu {
-    padding: 0;
+    padding: 7px 21px
   }
 
   .header__logo {
@@ -32,8 +39,8 @@
   /* hero */
 
   .hero__wrapper {
-    min-height: 459px;
-    padding-top: 128px;
+    min-height: 467px;
+    padding-top: 135px;
   }
 
   .hero__middle {
@@ -109,6 +116,7 @@
   .nominations__list {
     gap: 20px 8px;
     margin-bottom: 42px;
+    padding-top: 9px;
   }
 
   .nominations__button-container {
@@ -166,7 +174,7 @@
   /* program */
 
   .program {
-    padding: 42px 12px;
+    padding: 42px 0px;
   }
 
   .program__speeker-name {
@@ -219,11 +227,10 @@
 }
 
 @media screen and (max-width: 1023px) {
-
   .no-scroll {
     padding-right: 0;
   }
-  .container {
+  .hero__container {
     max-width: 768px;
   }
 
@@ -246,14 +253,34 @@
     padding: 0;
   }
 
-  .header__top {
-    max-width: 198px;
-  }
-
   .header__logo {
     width: 102px;
     height: 20px;
     transform: none;
+  }
+
+  .header__wrapper {
+    max-width: 209px;
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .header__wrapper--open {
+    padding: 6px 10px 18px;
+    gap: 11px;
+  }
+
+  .nav__list {
+    width: 100%;
+    padding: 0;
+  }
+
+  .nav__item {
+    font-size: 12px;
+  }
+
+  .slider__buttons {
+    padding-top: 41px;
   }
 
   /* hero */
@@ -261,6 +288,7 @@
   .hero__wrapper {
     padding-top: 71px;
     min-height: 336px;
+    background-position: 29px center;
   }
 
   .hero__text {
@@ -407,6 +435,7 @@
   .nominations__list {
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 32px;
+    padding-top: 13px;
   }
 
   .nomination__text {
@@ -445,6 +474,8 @@
   .video__text {
     max-width: 744px;
     font-size: 20px;
+    line-height: 140%; /* 28px */
+    letter-spacing: -1px;
   }
 
   .video__wrapper {
@@ -486,6 +517,10 @@
     text-align: center;
   }
 
+  .subtitle--program {
+    margin-bottom: 18px;
+  }
+
   .program__bottom {
     flex-direction: column;
     align-items: center;
@@ -514,8 +549,12 @@
 
   /* contacts */
 
+  .contacts__people {
+    min-width: initial;
+  }
+
   .contacts__container {
-    padding: 32px 12px 43px;
+    padding: 32px 12px;
     background-image: url(../img/contacts-background-768.webp);
   }
 
@@ -530,6 +569,10 @@
     line-height: normal;
   }
 
+  .contacts__wrapper {
+    padding-inline: 12px;
+  }
+
   /* footer */
 
   .footer {
@@ -541,7 +584,7 @@
   .modal {
     max-width: 581px;
     padding: 20px;
-    align-items: center
+    align-items: center;
   }
 
   .modal__title {
@@ -555,7 +598,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    align-items: center
+    align-items: center;
   }
 
   .form__consent-group {
@@ -595,6 +638,14 @@
 
   /* hero */
 
+  .header__container {
+    height: 40px;
+  }
+
+  .button_menu {
+    height: 8px;
+  }
+
   .hero__middle {
     flex-direction: column;
     padding-left: 0;
@@ -610,6 +661,7 @@
   }
 
   .hero__wrapper {
+    padding-bottom: 8px;
     background-image: url(../img/hero-background-320.webp);
   }
 
@@ -738,7 +790,7 @@
 
 @media screen and (max-width: 516px) {
   .container {
-    max-width: 320px;
+    /* max-width: 320px; */
     padding: 0 10px;
   }
   .title {
@@ -748,11 +800,17 @@
   /* header */
 
   .hero__container {
+    max-width: 320px;
     padding: 0;
   }
 
-  .header__top {
+  .header__wrapper {
     max-width: 100%;
+    width: calc(100% - 20px);
+  }
+
+  .nav__list {
+    gap: 16.3px;
   }
 
   .header__logo {
@@ -762,6 +820,7 @@
 
   .button_menu {
     height: 8px;
+    margin-right: 10px;
   }
 
   /* hero */
@@ -854,7 +913,7 @@
   }
 
   .stage--active .stage__date--mobile {
-    display: block!important;
+    display: block !important;
     font-size: 14px;
   }
 
@@ -908,7 +967,7 @@
   }
 
   .nominations__list {
-    gap: 12px;
+    gap: 14px;
   }
 
   .nomination__text {
@@ -961,6 +1020,9 @@
     padding-left: 0;
   }
 
+  .subtitle--program {
+    margin-bottom: 16px;
+  }
   .program__speeker-description {
     gap: 14px;
   }
@@ -976,8 +1038,13 @@
     background-image: url(../img/contacts-background-320.webp);
   }
 
+  .contacts__wrapper {
+    padding: 0;
+    gap: 9px;
+  }
+
   .contacts__name {
-    max-width: 179px;
+    max-width: 155px;
   }
 
   .contacts__text {
