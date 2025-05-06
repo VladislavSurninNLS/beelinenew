@@ -29,7 +29,7 @@
   }
 
   .button_menu {
-    padding: 7px 21px
+    padding: 7px 21px;
   }
 
   .header__logo {
@@ -53,13 +53,13 @@
   }
 
   .hero__text-wrapper {
-    background-image: url(../img/hero-block-top-1024.webp);
+    background-image: var(--bg-hero-block-top-1024);
   }
 
   .hero__bottom {
     margin-right: 150px;
     padding-left: 85px;
-    background-image: url(../img/hero-block-bottom-1024.webp);
+    background-image: var(--bg-hero-block-bottom-1024);
   }
 
   /* about */
@@ -71,7 +71,7 @@
 
   .about__bottom {
     padding: 42px 40px;
-    background-image: url(../img/about-background-1024.webp);
+    background-image: var(--bg-about-background-1024);
   }
 
   .about__text-wrapper {
@@ -91,7 +91,7 @@
   .stages__container {
     min-height: 750px;
     padding: 42px 12px;
-    background-image: url(../img/stages-background-1024.webp);
+    background-image: var(--bg-stages-background-1024);
   }
 
   /* experts */
@@ -122,7 +122,7 @@
   .nominations__button-container {
     margin-inline: -12px;
     padding: 32px 12px;
-    background-image: url(../img/nominations-background-1024.webp);
+    background-image: var(--bg-nominations-background-1024);
   }
 
   .nominations__button {
@@ -161,8 +161,10 @@
 
   .winners__container {
     padding: 40px 12px;
-    background-image: url(../img/winners-background-1024.webp);
+    background-image: var(--bg-winners-background-1024);
     background-position-y: -3px;
+    background-position-x: center;
+    background-repeat: no-repeat;
   }
 
   .winners__container::after,
@@ -211,7 +213,7 @@
 
   .contacts__container {
     padding: 42px 12px 55px;
-    background-image: url(../img/contacts-background-1024.webp);
+    background-image: var(--bg-contacts-background-1024);
     background-repeat: no-repeat;
   }
 
@@ -312,18 +314,18 @@
   }
 
   .hero__middle::before {
-    background-image: url(../img/hero-block-768.webp);
+    background-image: var(--bg-hero-block-768);
   }
 
   .hero__text-wrapper {
     padding: 8px;
-    background-image: url(../img/hero-block-top-768.webp);
+    background-image: var(--bg-hero-block-top-768);
   }
 
   .hero__bottom {
     margin-right: 54px;
     padding-left: 84px;
-    background-image: url(../img/hero-block-bottom-768.webp);
+    background-image: var(--bg-hero-block-bottom-768);
   }
 
   /* about */
@@ -334,7 +336,7 @@
 
   .about__bottom {
     padding: 32px 12px;
-    background-image: url(../img/about-background-768.webp);
+    background-image: var(--bg-about-background-768);
   }
 
   .about__buttons {
@@ -450,7 +452,7 @@
 
   .nominations__button-container {
     padding: 22px 12px;
-    background-image: url(../img/nominations-background-768.webp);
+    background-image: var(--bg-nominations-background-768);
   }
 
   .nominations__button {
@@ -495,7 +497,7 @@
 
   .winners__container {
     padding: 28px 12px 36px;
-    background-image: url(../img/winners-background-768.webp);
+    background-image: var(--bg-winners-background-768);
   }
 
   .slider__buttons--winners {
@@ -555,7 +557,7 @@
 
   .contacts__container {
     padding: 32px 12px;
-    background-image: url(../img/contacts-background-768.webp);
+    background-image: var(--bg-contacts-background-768);
   }
 
   .contacts__text {
@@ -662,7 +664,7 @@
 
   .hero__wrapper {
     padding-bottom: 8px;
-    background-image: url(../img/hero-background-320.webp);
+    background-image: var(--bg-hero-background-320);
   }
 
   .hero__text {
@@ -672,7 +674,7 @@
   .hero__text-wrapper {
     max-width: 320px;
     width: 100%;
-    background-image: url(../img/hero-block-top-320.webp);
+    background-image: var(--bg-hero-block-top-320);
   }
 
   .hero__bottom {
@@ -680,7 +682,7 @@
     justify-content: center;
     margin-right: 0;
     padding-left: 0;
-    background-image: url(../img/hero-block-bottom-320.webp);
+    background-image: var(--bg-hero-block-bottom-320);
     background-size: contain;
   }
   .video__player iframe {
@@ -864,7 +866,7 @@
   }
 
   .about__bottom {
-    background-image: url(../img/about-background-320.webp);
+    background-image: var(--bg-about-background-320);
   }
 
   .about__text {
@@ -905,7 +907,7 @@
   }
 
   .stages__container {
-    background-image: url(../img/stages-background-320.webp);
+    background-image: var(--bg-stages-background-320);
   }
 
   .stage--active .stage__date {
@@ -975,7 +977,7 @@
   }
 
   .nominations__button-container {
-    background-image: url(../img/nominations-background-320.webp);
+    background-image: var(--bg-nominations-background-320);
   }
 
   /* members */
@@ -1035,7 +1037,7 @@
 
   .contacts__container {
     padding: 32px 10px;
-    background-image: url(../img/contacts-background-320.webp);
+    background-image: var(--bg-contacts-background-320);
   }
 
   .contacts__wrapper {

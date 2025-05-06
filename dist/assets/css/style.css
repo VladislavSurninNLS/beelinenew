@@ -286,7 +286,7 @@ h6 {
   padding-top: 264px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url("../img/hero-background.webp");
+  background-image: var(--bg-hero-background);
   background-position: center;
 }
 
@@ -307,7 +307,7 @@ h6 {
 .hero__bottom {
   margin-right: 97px;
   padding-left: 85px;
-  background-image: url(../img/hero-block-bottom.webp);
+  background-image: var(--bg-hero-block-bottom);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -333,14 +333,14 @@ h6 {
   display: block;
   width: 198px;
   aspect-ratio: 1/1;
-  background: url("../img/hero-block.webp");
+  background: var(--bg-hero-block);
   background-blend-mode: darken;
 }
 
 .hero__text-wrapper {
   width: 100%;
   padding: 13px 35px 14px 10px;
-  background-image: url("../img/hero-block-top.webp");
+  background-image: var(--bg-hero-block-top);
   background-repeat: no-repeat;
 }
 
@@ -390,7 +390,7 @@ h6 {
   gap: 12px;
   align-items: center;
   padding: 70px 40px;
-  background-image: url("../img/about-background.webp");
+  background-image: var(--bg-about-background);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -421,7 +421,7 @@ h6 {
   gap: 12px;
   flex-direction: column;
   background-color: var(--color-light-green);
-  background-image: url("../img/stage-background.webp");
+  background-image: var(--bg-stage-background);
   background-size: cover;
 }
 
@@ -756,7 +756,7 @@ h6 {
   padding: 72px 40px;
   flex-direction: column;
   align-items: flex-start;
-  background-image: url("../img/nominations-background.webp");
+  background-image: var(--bg-nominations-background);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -831,7 +831,7 @@ h6 {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("../img/winners-left-background.webp");
+  background-image: var(--bg-winners-left-background);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -840,7 +840,7 @@ h6 {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("../img/winners-right-background.webp");
+  background-image: var(--bg-winners-right-background);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 235px -4px;
@@ -864,7 +864,7 @@ h6 {
 .program {
   padding: 72px 0;
   background-color: var(--color-light-green);
-  background-image: url("../img/program-background.webp");
+  background-image: var(--bg-program-background);
   background-position: bottom;
   background-repeat: no-repeat;
 }
@@ -962,7 +962,7 @@ h6 {
 
 .partners {
   padding: 72px 0;
-  background-image: url("../img/partnerts-background.webp");
+  background-image: var(--bg-partners-background);
 }
 
 .subtitle--partners {
@@ -973,7 +973,6 @@ h6 {
 .partners__list {
   min-height: 166px;
 }
-
 
 .partners__item {
   height: 100%;
@@ -1003,7 +1002,7 @@ h6 {
   position: absolute;
   z-index: -1;
   inset: 0;
-  background-image: url("../img/contacts-left-background.webp");
+  background-image: var(--bg-contacts-left-background);
   background-repeat: no-repeat;
 }
 
@@ -1012,7 +1011,7 @@ h6 {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background-image: url("../img/contacts-right-background.webp");
+  background-image: var(--bg-contacts-right-background);
   background-repeat: no-repeat;
   background-position: right;
 }
