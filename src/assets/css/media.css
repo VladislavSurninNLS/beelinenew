@@ -215,6 +215,7 @@
     padding: 42px 12px 55px;
     background-image: var(--bg-contacts-background-1024);
     background-repeat: no-repeat;
+    background-position: center;
   }
 
   .contacts__container::after,
@@ -1031,6 +1032,13 @@
 
   .program__bottom {
     gap: 19px;
+  }
+
+  /* partners */
+
+  .partners__link img {
+    max-height: 38px;
+    max-width: 135px;
   }
 
   /* contacts */
