@@ -1,1 +1,0 @@
-export function stagesInit(){document.querySelectorAll(".stage").forEach((e=>{e.addEventListener("click",(()=>{const t=document.querySelector(".stage--active");if(t&&t!==e){t.classList.remove("stage--active");const s=window.matchMedia("(min-width: 520px)").matches?800:0;setTimeout((()=>{e.classList.add("stage--active")}),s)}else t||e.classList.add("stage--active")}))}))}
